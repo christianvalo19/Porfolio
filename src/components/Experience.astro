@@ -1,0 +1,39 @@
+
+---
+import type { ACTION_ERROR_CODES, ACTION_QUERY_PARAMS } from "astro:actions";
+import ExperienceItem from "./ExperienceItem.astro";
+
+const experience = [
+{
+    date: "Febrero 2015 - Enero 2018.",
+    title: "Editor multimedia / Desarrollador Web.",
+    description: "Creación de material visual para proyectos. Edición de videos, presentaciones, imágenes, renders en 3D, diseño Frontend de página web para los proyectos, gestión  y registro de datos",
+    link: "https://www.youtube.com/watch?v=3jq2qWITj7M",
+    company: "Brigada de Inteligencia Militar  - Ejercito Nacional de Colombia",
+},
+{
+    date: "Mayo 2019 - Septiembre 2022.",
+    title: "Agente IT / Agente Call Center.",
+    description: "Encargado de gestionar PQR's, soporte técnico a los  usuarios, solucionar errores sencillos de los equipos de cómputo que usan los agentes para realizar sus labores.",
+    company: "Enel Codensa - Americas BPS.",
+},
+{
+    date: "Mayo 2023 - Noviembre 2023",
+    title: "Técnico de reacondicionamiento electrónico",
+    description: "Diagnosticar y reparar equipos de computo, determinar el ciclo de vida de equipos electrónicos como: teléfonos móviles, tablets, control de calidad en el area de reacondicionamiento.",
+    company: "PCSheck Tecnología y servicios.",
+}
+]
+
+---
+
+<ol class="relative mt-16">
+    {
+      experience.map((experiencie) => (
+        <li class="">
+          <ExperienceItem {...experiencie} />
+        </li>
+      ))
+    }
+  </ol>
+

@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+
+import Socialbuttons from '../components/Socialbuttons.astro'
+import SectionContainer from '../components/SectionContainer.astro';
+import ProfileCheck from "../icons/ProfileCheck.astro";
+
+//Menu
+import Experience from '../components/Experience.astro';
+import Projects from '../components/projects.astro';
+import Aboutme from '../components/Aboutme.astro';
+//Iconos socialNav
+import LinkedInIcon from '../icons/Linkedin.astro';
+import GitHubIcon from '../icons/GitHub.astro';
+import MailIcon from '../icons/mail.astro';
+import YoutubeIcon from '../icons/Youtube.astro';
+import WhatsappIcon from '../icons/Whatsapp.astro'
+//Iconos tematicas
+import CodeIcon from '../icons/Code.astro';
+import BriefCase from '../icons/BriefCase.astro';
+---
+
+<Layout 
+	title="Porfolio de Christian Valencia - Desarrollador Web."
+	description="Contrata a Christian Valencia para crear o mejorar tu aplicacion Web. Especializado en crear y optimizar paginas Web"
+	>
+	<main class="px-5">
+		<SectionContainer class="py-48">
+			<h1 
+				class="text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-4 lg:pb-10">
+				Hola soy Christian Valencia Ojeda
+				<a 
+					href="https://www.linkedin.com/in/christianvalo/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="lg:text-2xl ltext-xl text-pretty">
+				<span>+7 años de experiencia. </span>
+				<span class="text-blue-200/90">Desarrollador Web, Editor Multimedia, Tecnólogo en Electrónica y Comunicaciones. </span>
+				<span class="text-purple-200/90">De Pasto, Colombia. </span>
+				<span class="opacity-85">Especializado en creación de páginas Web, Animación en 3D y videos para cualquier tipo de proyectos.</span>
+			</h2>
+				<ul> 
+					<nav class="flex gap-4 mt-8 flex-wrap">
+						<Socialbuttons href="https://www.linkedin.com/in/christianvalo/">
+							<LinkedInIcon class="size-4 lg:size-6" /> 
+							Linkedin
+						</Socialbuttons>
+						<Socialbuttons href="https://github.com/christianvalo19">
+							<GitHubIcon class="size-4 lg:size-6" /> 
+							Github
+						</Socialbuttons>
+						<Socialbuttons href="https://www.youtube.com/@ineedito5573">
+							<YoutubeIcon class="size-4 lg:size-6" /> 
+							Youtube
+						</Socialbuttons>
+						<Socialbuttons href="mailto:christianvalo@hotmail.com">
+							<MailIcon class="size-4 lg:size-6" /> 
+							christianvalo@hotmail.com
+						</Socialbuttons>
+						<Socialbuttons href="https://wa.me/+573136908754">
+							<WhatsappIcon class="size-4 lg:size-6" /> 
+							+57 313 690 8754
+						</Socialbuttons>
+					</nav>
+				</ul>
+		</SectionContainer>
+		<SectionContainer id="experience" class="py-6">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefCase class="size-7"/>
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+			
+		<SectionContainer id="projects" class="py-6">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects/>
+		</SectionContainer>
+
+		<SectionContainer id="about" class="py-6">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<ProfileCheck class="size-7"/>
+				Acerca de mi
+			</h2>
+			<Aboutme/>
+		</SectionContainer>		
+	</main>
+
+</Layout>
+
